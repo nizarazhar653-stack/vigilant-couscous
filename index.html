@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jaringan Komputer - Kelompok 4 TKJ SMKN 2 Banjar">
+    <title>JARINGAN KOMPUTER</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #07111f, #0b2545, #123c69);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: muncul 1s ease;
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            color: #00eaff;
+            text-shadow: 0 0 15px #00eaff;
+        }
+
+        .header p {
+            color: #c9d8e8;
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .slogan {
+            color: #00eaff;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(0, 234, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+            animation: naik 1s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00eaff;
+            box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            color: #00eaff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #d5e3f0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 13px;
+            border-radius: 10px;
+            background: #00a8cc;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00eaff;
+            color: #00111c;
+            box-shadow: 0 0 15px #00eaff;
+        }
+
+        .youtube {
+            background: #e50914;
+        }
+
+        .youtube:hover {
+            background: #ff3030;
+            color: white;
+            box-shadow: 0 0 15px #ff3030;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #9eb3c7;
+            font-size: 14px;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes naik {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .icon {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="icon">🌐</div>
+
+            <h1>JARINGAN KOMPUTER</h1>
+
+            <p>
+                <span class="slogan">
+                    Ayo lihat detail dan penjelasannya di sini!
+                </span>
+                <br>
+                TKJ SMKN 2 BANJAR
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🎓</div>
+
+                <h2>Telkom University</h2>
+
+                <p>
+                    Akses sumber pembelajaran mengenai
+                    Jaringan Komputer dari Telkom University.
+                </p>
+
+                <a
+                    class="btn"
+                    href="https://share.google/vENbZgQcCoRmJgukJ"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📚 Buka Sumber
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">▶️</div>
+
+                <h2>Video Pembelajaran</h2>
+
+                <p>
+                    Saksikan video pembelajaran untuk
+                    memahami materi Jaringan Komputer.
+                </p>
+
+                <a
+                    class="btn youtube"
+                    href="https://youtu.be/xT58k6AB7gk?si=Jc86NkzM3yL-YJ7O"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    ▶️ Tonton Video
+                </a>
+            </div>
+
+        </div>
+
+        <footer>
+            © 2026 Kelompok 4 | TKJ SMKN 2 Banjar
+        </footer>
+
+    </div>
+
+    <script>
+        window.onload = function () {
+            console.log("Website Jaringan Komputer berhasil dibuka!");
+        };
+
+        const buttons = document.querySelectorAll(".btn");
+
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                button.style.transform = "scale(0.95)";
+
+                setTimeout(function() {
+                    button.style.transform = "scale(1)";
+                }, 150);
+            });
+        });
+    </script>
+
+</body>
+</html>
